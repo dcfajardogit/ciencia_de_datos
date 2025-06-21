@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="deploymentStatusQa <= 1.5\ngini = 0.636\nsamples = 3979\nvalue = [32.0, 1894.0, 852.0, 1201.0]\nclass = PENDING", fillcolor="#d1f9ce"] ;
+1 [label="deploymentStatusQa <= 0.5\ngini = 0.262\nsamples = 895\nvalue = [14, 759, 0, 122]\nclass = PENDING", fillcolor="#67ea5c"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.291\nsamples = 17\nvalue = [14, 3, 0, 0]\nclass = DEPLOYED", fillcolor="#eb9c63"] ;
+1 -> 2 ;
+3 [label="gini = 0.239\nsamples = 878\nvalue = [0, 756, 0, 122]\nclass = PENDING", fillcolor="#65e959"] ;
+1 -> 3 ;
+4 [label="deploymentStatusQa <= 2.5\ngini = 0.666\nsamples = 3084\nvalue = [18, 1135, 852, 1079]\nclass = PENDING", fillcolor="#fafef9"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="gini = 0.049\nsamples = 481\nvalue = [0, 12, 469, 0]\nclass = FAILED", fillcolor="#3ea0e6"] ;
+4 -> 5 ;
+6 [label="gini = 0.62\nsamples = 2603\nvalue = [18, 1123, 383, 1079]\nclass = PENDING", fillcolor="#fafef9"] ;
+4 -> 6 ;
+}
